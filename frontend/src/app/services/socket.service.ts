@@ -23,7 +23,11 @@ export class SocketService {
   private socket: Socket;
 
   constructor() {
-    this.socket = io('http://localhost:3000');
+    const URL = window.location.hostname === "localhost"
+      ? "http://localhost:3000"
+      : "https://real-time-quiz-battle-backend.onrender.com"; // Placeholder URL to be updated later
+
+    this.socket = io(URL);
   }
 
   // ---- EMITTERS ----
