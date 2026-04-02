@@ -25,7 +25,7 @@ export class SocketService {
   constructor() {
     const URL = window.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://real-time-quiz-battle-backend.onrender.com"; // Placeholder URL to be updated later
+      : "https://games-zclh.onrender.com"; 
 
     this.socket = io(URL);
   }
